@@ -23,7 +23,7 @@ $results_gallery = $wpdb->get_row("SELECT MAX(id_gallery) AS maxnumber FROM " . 
  <form action="admin.php?page=simple-gallery-by-solucioneswebig" method="post" class="swb_form" id="form-guardar">
   <div class="shortcode">
   <p><strong><?php echo __('Copy','swb_simple_gallery'); ?> shortcode</strong></p>
-   [galeria id="<?php echo $results_gallery->maxnumber; ?>"]
+   [galeria id="<?php echo $results_gallery->maxnumber+1; ?>"]
   </div>
   <hr>
   <h5><?php echo __('Add new gallery','swb_simple_gallery'); ?></h5>
