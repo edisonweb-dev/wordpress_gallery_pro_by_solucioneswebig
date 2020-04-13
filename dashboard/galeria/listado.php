@@ -12,21 +12,22 @@ $results_gallery = $wpdb->get_row("SELECT MAX(id_gallery) AS maxnumber FROM " . 
 
 <div class="galeriarow">
   <div class="galeriacol-md-12">
-  <h3 class="wp-heading-inline"><?php echo __('Simple Gallery','swb_simple_gallery'); ?></h3>
+  <h3 class="wp-heading-inline"><span class="dashicons dashicons-camera" style="font-size: 40px;margin-right: 20px;"></span> <?php echo __('Simple Gallery','swb_simple_gallery'); ?></h3>
   </div>
 </div>
 
 <hr>
 
 <div class="galeriarow"> 
-<div class="galeriacol-md-3">
+<div class="galeriacol-md-3" style="background: #dedede;padding-top: 20px;padding-bottom: 20px;">
  <form action="admin.php?page=simple-gallery-by-solucioneswebig" method="post" class="swb_form" id="form-guardar">
+  <!--
   <div class="shortcode">
   <p><strong><?php echo __('Copy','swb_simple_gallery'); ?> shortcode</strong></p>
    [galeria id="<?php echo $results_gallery->maxnumber+1; ?>"]
   </div>
-  <hr>
-  <h5><?php echo __('Add new gallery','swb_simple_gallery'); ?></h5>
+  -->
+  <h5><span class="dashicons dashicons-plus-alt"></span> <?php echo __('Add new gallery','swb_simple_gallery'); ?></h5>
   <hr>
   <div class="galeriaform-group">
     <label for="name_gallery"><?php echo __('Name gallery','swb_simple_gallery'); ?></label>
@@ -36,6 +37,10 @@ $results_gallery = $wpdb->get_row("SELECT MAX(id_gallery) AS maxnumber FROM " . 
     <label for="title_gallery"><?php echo __('Title gallery','swb_simple_gallery'); ?></label>
     <input type="text" name="title_gallery" id="title_gallery" class="galeriamb-0 galeriaform-control">
   </div>
+  <div class="galeriaform-group">
+  <label for="description_gallery"><?php echo __('Descripcion gallery','swb_simple_gallery'); ?></label>  
+  <textarea name="description_gallery" id="description_gallery" class="galeriamb-0 galeriaform-control"></textarea>    
+  </div>	 
   <div class="galeriaform-group">
   <label for="type_gallery"><?php echo __('Type design','swb_simple_gallery'); ?></label>
   <select name="type_gallery" id="type_gallery" class="galeriamb-0 galeriaform-control">
@@ -53,10 +58,7 @@ $results_gallery = $wpdb->get_row("SELECT MAX(id_gallery) AS maxnumber FROM " . 
     <option value="3"><?php echo __('Ocultar Titulo y Descripción','swb_simple_gallery'); ?></option>
   </select>    
   </div>
-  <div class="galeriaform-group">
-  <label for="description_gallery"><?php echo __('Descripcion gallery','swb_simple_gallery'); ?></label>  
-  <textarea name="description_gallery" id="description_gallery" class="galeriamb-0 galeriaform-control"></textarea>    
-  </div>
+
   <div class="galeriaform-group">
   <button type="submit" name="save_new_gallery" class="galeriabtn galeriabtn-primary galeriabtn-sm galeriabtn-block"><?php echo __('Save','swb_simple_gallery'); ?></button>    
   </div>
@@ -102,7 +104,3 @@ $results_gallery = $wpdb->get_row("SELECT MAX(id_gallery) AS maxnumber FROM " . 
 </div>
 </div>
 </section>
-
-
-
-
