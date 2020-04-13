@@ -60,7 +60,7 @@ function gallery_1(){
 }
 
 
-
+add_action('wp_enqueue_scripts', 'gallery_1'); 
 
 // var_dump($galeria);
 // echo $galeria[0]->type_gallery;
@@ -87,7 +87,7 @@ function gallery_1(){
 
 <?php
 if ($galeria[0]->type_gallery == 1) {
- add_action('wp_enqueue_scripts', 'gallery_1'); 
+
 
 ?>
   <!-- Grid row -->
