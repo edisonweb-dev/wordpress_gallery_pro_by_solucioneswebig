@@ -154,6 +154,8 @@ function gallery_1(){
 
 }
 
+add_action('wp_enqueue_scripts', 'gallery_1'); 
+
 
 // add_action('admin_enqueue_scripts', 'swb_simple_gallery_styles');
 

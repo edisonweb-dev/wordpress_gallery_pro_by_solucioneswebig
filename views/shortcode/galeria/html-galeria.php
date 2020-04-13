@@ -37,7 +37,7 @@ $galeria = $wpdb->get_results("
 <?php
 if ($galeria[0]->type_gallery == 1) {
 
-add_action('wp_enqueue_scripts', 'gallery_1'); 
+
 ?>
   <!-- Grid row -->
   <!-- masonry -->
