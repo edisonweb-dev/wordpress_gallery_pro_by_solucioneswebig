@@ -2,6 +2,7 @@
 
 global $wpdb;
 
+function validar_direct($id){
 $galeria = $wpdb->get_results("
     SELECT *
     FROM " . TABLE_GALLERY . " as gallery
@@ -12,17 +13,21 @@ $galeria = $wpdb->get_results("
 if ($galeria[0]->type_gallery == 1) {
 add_action('wp_enqueue_scripts', 'gallery_1'); 
 }
+}
+
+
 
 function page_galeria_imagen( $atts ){
-
-    
-
-	ob_start();
     $atts = shortcode_atts( array(
             'id' => 0
     ), $atts);
 
     extract($atts);
+    validar_direct($id);
+
+    ob_start();
+    
+
 
     // var_dump($atts);
     
