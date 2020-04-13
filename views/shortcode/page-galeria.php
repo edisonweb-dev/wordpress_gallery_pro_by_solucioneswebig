@@ -1,13 +1,14 @@
 <?php
 
-global $wpdb;
+
 
 function validar_direct($id){
+global $wpdb;
 $galeria = $wpdb->get_results("
     SELECT *
     FROM " . TABLE_GALLERY . " as gallery
     LEFT JOIN " . IMG_GALLERY . " as img ON img.id_gallery = gallery.id_gallery
-    WHERE gallery.id_gallery = 2
+    WHERE gallery.id_gallery = ".$id."
 ");
 
 if ($galeria[0]->type_gallery == 1) {
