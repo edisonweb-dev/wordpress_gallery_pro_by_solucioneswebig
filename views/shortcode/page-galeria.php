@@ -14,7 +14,8 @@ $galeria = $wpdb->get_results("
 if ($galeria[0]->type_gallery == 1) {
 add_action('wp_enqueue_scripts', 'gallery_1'); 
 }
-echo "<h1>AQUIIIIIIIIII</h1>";
+echo "<h1>AQUIIIIIIIIII ".$id."</h1>";
+
 }
 
 
