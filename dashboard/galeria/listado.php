@@ -97,7 +97,7 @@ $results_gallery = $wpdb->get_row("SELECT MAX(id_gallery) AS maxnumber FROM " . 
 <div class="galeriacontainer-fluid">
   <div class="galeriarow galeriafooter">
   <div class="galeriacol-md-12 galeriatext-right galeriapt-2 galeriapb-2">
-    <?php echo __('Developed by','swb_solucio'); ?> <a href="https://solucioneswebig.com" target="_blank" class="galeriatext-white">solucioneswebig</a>
+    <?php echo __('Developed by','swb_solucio'); ?> <a href="https://solucioneswebig.com" target="_blank" >solucioneswebig</a>
   </div>
 </div>
 </div>

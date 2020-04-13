@@ -27,7 +27,7 @@ $galeria = $wpdb->get_results("
       <?php if($galeria[0]->ocultar_gallery == 2 || $galeria[0]->ocultar_gallery == 3){
 
       }else{ ?>
-        <p><?php echo $galeria[0]->description_gallery; ?></p>
+        <p class="galeriatext-center"><?php echo $galeria[0]->description_gallery; ?></p>
       <?php } ?>  
     </div>
   </div>

@@ -98,7 +98,7 @@ $get_gallery = $wpdb->get_row("SELECT * FROM " . TABLE_GALLERY . " as gallery WH
 
 
         <div class="galeriaform-group">
-          <label for=""><?php echo __('Upload the Documents:', 'swb_simple_gallery'); ?></label>
+          <label for=""><?php echo __('Upload images:', 'swb_simple_gallery'); ?></label>
           <!-- <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form> -->
 
           <form action="<?php echo $ruta; ?>" class="dropzone" id="dropzoneForm" enctype="multipart/form-data">
@@ -160,14 +160,14 @@ $get_gallery = $wpdb->get_row("SELECT * FROM " . TABLE_GALLERY . " as gallery WH
 
               <div class="galeriacol-md-3 galeriad-flex galeriaalign-items-center">
                 <div class="galeriaform-group">
-                  <label for="titulo_imagen">Título</label>
+                  <label for="titulo_imagen">Title</label>
                   <input type="text" name="titulo_imagen" class="titulo_imagen galeriaform-control" data-id="<?php echo $documento->id_img_gallery; ?>" value="<?php echo $documento->title; ?>">
                 </div>
               </div>
 
               <div class="galeriacol-md-3 galeriad-flex galeriaalign-items-center">
                 <div class="galeriaform-group">
-                  <label for="descripcion_imagen">Descripción</label>
+                  <label for="descripcion_imagen">Description</label>
                   <input type="text" name="descripcion_imagen" class="descripcion_imagen galeriaform-control" data-id="<?php echo $documento->id_img_gallery; ?>" value="<?php echo $documento->description; ?>">
                 </div>
               </div>
@@ -182,11 +182,6 @@ $get_gallery = $wpdb->get_row("SELECT * FROM " . TABLE_GALLERY . " as gallery WH
                 </button>
 
               </div>
-
-
-
-
-
 
 
           <?php
@@ -207,7 +202,7 @@ $get_gallery = $wpdb->get_row("SELECT * FROM " . TABLE_GALLERY . " as gallery WH
   <div class="galeriacontainer-fluid">
     <div class="galeriarow galeriafooter">
       <div class="galeriacol-md-12 galeriatext-right galeriapt-2 galeriapb-2">
-        <?php echo __('Developed by', 'swb_solucio'); ?> <a href="https://solucioneswebig.com" target="_blank" class="galeriatext-white">solucioneswebig</a>
+        <?php echo __('Developed by', 'swb_solucio'); ?> <a href="https://solucioneswebig.com" target="_blank" >solucioneswebig</a>
       </div>
     </div>
   </div>
