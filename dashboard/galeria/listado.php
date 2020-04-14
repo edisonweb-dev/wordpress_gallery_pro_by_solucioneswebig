@@ -44,9 +44,11 @@ $results_gallery = $wpdb->get_row("SELECT MAX(id_gallery) AS maxnumber FROM " . 
   <div class="galeriaform-group">
   <label for="type_gallery"><?php echo __('Type design','swb_simple_gallery'); ?></label>
   <select name="type_gallery" id="type_gallery" class="galeriamb-0 galeriaform-control">
-    <option value="1"><?php echo __('Design Masonry','swb_simple_gallery'); ?></option>
-    <option value="2"><?php echo __('Design Fancybox','swb_simple_gallery'); ?></option>
-    <option value="3"><?php echo __('Design Lightbox','swb_simple_gallery'); ?></option>
+  <option value="1" ><?php echo __('Style 1', 'swb_simple_gallery'); ?></option>
+  <option value="2" ><?php echo __('Style 2', 'swb_simple_gallery'); ?></option>
+  <option value="3" ><?php echo __('Style 3', 'swb_simple_gallery'); ?></option>
+  <option value="4" ><?php echo __('Style 4', 'swb_simple_gallery'); ?></option>   
+  <option value="5" ><?php echo __('Style 5', 'swb_simple_gallery'); ?></option>   
   </select>    
   </div>
   <div class="galeriaform-group">

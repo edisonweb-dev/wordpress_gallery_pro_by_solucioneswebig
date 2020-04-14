@@ -51,13 +51,20 @@ $get_gallery = $wpdb->get_row("SELECT * FROM " . TABLE_GALLERY . " as gallery WH
             <select name="type_galleryE" id="type_galleryE" class="galeriaform-control">
               <option value="1" <?php if ($get_gallery->type_gallery == 1) {
                                   echo "SELECTED";
-                                } ?>><?php echo __('Design Masonry', 'swb_simple_gallery'); ?></option>
+                                } ?>><?php echo __('Style 1', 'swb_simple_gallery'); ?></option>
               <option value="2" <?php if ($get_gallery->type_gallery == 2) {
                                   echo "SELECTED";
-                                } ?>><?php echo __('Design Fancybox', 'swb_simple_gallery'); ?></option>
-              <option value="3" <?php if ($get_gallery->type_gallery == 2) {
+                                } ?>><?php echo __('Style 2', 'swb_simple_gallery'); ?></option>
+              <option value="3" <?php if ($get_gallery->type_gallery == 3) {
                                   echo "SELECTED";
-                                } ?>><?php echo __('Design Lightbox', 'swb_simple_gallery'); ?></option>
+                                } ?>><?php echo __('Style 3', 'swb_simple_gallery'); ?></option>
+              <option value="4" <?php if ($get_gallery->type_gallery == 4) {
+                                  echo "SELECTED";
+                                } ?>><?php echo __('Style 4', 'swb_simple_gallery'); ?></option>
+                                
+             <option value="5" <?php if ($get_gallery->type_gallery == 5) {
+                echo "SELECTED";
+              } ?>><?php echo __('Style 5', 'swb_simple_gallery'); ?></option>                  
 
             </select>
           </div>

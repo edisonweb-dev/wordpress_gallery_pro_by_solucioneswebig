@@ -1,0 +1,163 @@
+/**
+* Template Name: Remember - v2.0.0
+* Template URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio {
+  padding-bottom: 40px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #444444;
+  margin: 0 3px 10px 3px;
+  transition: all ease-in-out 0.3s;
+  background: #efefef;
+  border-radius: 50px;
+}
+
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: #8fc04e;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item img {
+    /* position: relative; */
+    top: 0;
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    height: 400px;
+    object-fit: cover;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 1;
+  left: 15px;
+  right: 15px;
+  bottom: -50px;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+  padding: 15px 20px;
+  box-shadow: 0px 0px 18px #eaeaea;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info{
+  background: blue;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info .venobox{
+    opacity: 1;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info h4{
+  color: #fff;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info p{
+  color: #fff;
+}
+
+.tamano-fuente-title{
+  font-size: 25px !important;
+}
+
+.tamano-fuente-parrafo{
+  font-size: 20px !important;
+}
+
+.portfolio .portfolio-item .portfolio-info:hover{
+  opacity: 1;
+  left: 15px;
+  right: 15px;
+  bottom: -50px;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: blue;
+  padding: 15px 20px;
+  color: #000 !important;
+}
+
+.portfolio .portfolio-item .portfolio-info:hover .venobox{
+  opacity: 1;
+}
+
+.portfolio .portfolio-item .portfolio-info:hover p{
+  color: #fff !important;
+}
+
+.portfolio .portfolio-item .portfolio-info:hover h4{
+  color: #fff !important;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link {
+    position: absolute;
+    right: 50px;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    font-size: 24px;
+    top: calc(79% - 11px);
+    color: white;
+    transition: ease-in-out 0.3s;
+    background-color: #37bef7;
+    opacity: 0;
+}
+
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #d6e8bf;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 15px;
+}
+
+.portfolio .portfolio-item:hover img {
+  top: -30px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+  bottom: 0;
+}
+

@@ -15,19 +15,19 @@ $galeria = $wpdb->get_results("
 // echo $galeria[0]->type_gallery;
 ?>
 
-<div class="galeriacontainer">
-  <div class="galeriarow">
-    <div class="galeriacol-md-12">
+<div class="swb-container">
+  <div class="swb-row">
+    <div class="swb-col-md-12">
       <?php if($galeria[0]->ocultar_gallery == 1 || $galeria[0]->ocultar_gallery == 3){
 
       }else{ ?>
-        <h3 class="galeriatext-center"><?php echo $galeria[0]->title_gallery;?></h3>
+        <h3 class="swb-text-center"><?php echo $galeria[0]->title_gallery;?></h3>
       <?php } ?>
 
       <?php if($galeria[0]->ocultar_gallery == 2 || $galeria[0]->ocultar_gallery == 3){
 
       }else{ ?>
-        <p class="galeriatext-center"><?php echo $galeria[0]->description_gallery; ?></p>
+        <p class="swb-text-center"><?php echo $galeria[0]->description_gallery; ?></p>
       <?php } ?>  
     </div>
   </div>
@@ -36,6 +36,9 @@ $galeria = $wpdb->get_results("
 
 <?php
 if ($galeria[0]->type_gallery == 1) {
+
+  do_action( "ejecutar_galeria_1");
+
 ?>
   <!-- Grid row -->
   <!-- masonry -->
@@ -47,10 +50,10 @@ if ($galeria[0]->type_gallery == 1) {
 
       <li class="area" data-src="<?php echo $value->url_img ?>">
         <div class="contenido-galeria">
-          <h6 class="text-white"><?php echo $value->title ?></h6>
-          <p class="text-white"><?php echo $value->description ?></p>
+          <h6 class="swb-text-white"><?php echo $value->title ?></h6>
+          <p class="swb-text-white"><?php echo $value->description ?></p>
         </div>  
-        <a href="<?php echo $value->url_img ?>" class="example-image-link" data-lightbox="example-1"><img src="<?php echo $value->url_img ?>" class="galeriaimg-fluid"></a>
+        <a href="<?php echo $value->url_img ?>" class="example-image-link" data-lightbox="example-1"><img src="<?php echo $value->url_img ?>" class="swb-img-fluid"></a>
       
     </li>
     <?php
@@ -60,45 +63,143 @@ if ($galeria[0]->type_gallery == 1) {
 
 <?php
 } else if ($galeria[0]->type_gallery == 2) {
+
+  do_action( "ejecutar_galeria_2");
+  
 ?>
   <!-- Fancybox   -->
-  <div class="galeriacontainer-fluid">
-    <div class="galeriarow">
+  <section id="swb-portfolio" class="swb-portfolio">
+      <div class="swb-container">
+        <div class="swb-row swb-portfolio-container" data-aos="fade-up" data-aos-delay="100">
       <?php
       foreach ($galeria as $key => $value) :
       ?>
-        <a href="<?php echo $value->url_img ?>" class="fancy galeriacol-xs-6 galeriacol-sm-4 galeriacol-md-4 galeriamb-2" data-fancybox="gallery" data-caption="Caption #<?php echo $i++ ?>">
-          <img src="<?php echo $value->url_img ?>" alt="" class="h-content galeriaimg-fluid img-galeria-line" />
-        </a>
+
+         <div class="swb-col-lg-4 swb-col-md-6 swb-portfolio-item">
+            <a href="<?php echo $value->url_img ?>" data-gall="portfolioGallery" class="venobox preview-link" title="<?php echo $value->title ?> <?php echo $value->description ?>"><img src="<?php echo $value->url_img ?>" class="swb-img-fluid" alt=""></a>
+            <div class="swb-portfolio-info">
+              <h4><?php echo $value->title ?></h4>
+              <p><?php echo $value->description ?></p>
+              <a href="<?php echo $value->url_img ?>" data-gall="portfolioGallery" class="venobox preview-link" title="<?php echo $value->title ?> <?php echo $value->description ?>"><i class="bx bx-plus"></i></a>
+               </div>
+          </div>
 
       <?php
       endforeach;
       ?>
     </div>
   </div>
+</section>
 
 
 
 
 <?php
 } else if ($galeria[0]->type_gallery == 3) {
-?>
-  <div class="galeriacontainer-fluid">
 
-    <ul id="lightgallery" class="list-unstyled galeriarow">
+do_action( "ejecutar_galeria_3");
+
+?>
+    <section id="swb-portfolio" class="swb-portfolio">
+      <div class="swb-container">
+
+
+        <div class="swb-row swb-portfolio-container" data-aos="fade-up">
       <?php
       foreach ($galeria as $key => $value) :
       ?>
-        <li class="galeriacol-xs-6 galeriacol-sm-4 galeriacol-md-4" data-responsive="<?php echo $value->url_img ?>" data-src="<?php echo $value->url_img ?>" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-          <a href="<?php echo $value->url_img ?>" data-lightbox="image-1">
-            <img class="galeriaimg-fluid img-galeria-line h-content" src="<?php echo $value->url_img ?>">
-          </a>
-        </li>
+
+         <div class="swb-col-lg-4 swb-col-md-6 swb-portfolio-item">
+            <div class="swb-portfolio-wrap">
+               <img src="<?php echo $value->url_img ?>" class="swb-img-fluid" alt="">
+                <div class="swb-photo-text-more">
+                   <h4 class="swb-text-white swb-font-weight-bold"><?php echo $value->title ?></h4>
+                   <p class="swb-text-white swb-font-weight-bold"><?php echo $value->description ?></p>
+                </div>
+               <div class="swb-portfolio-links" style="background: rgba(0, 0, 0, 0.53);">
+                 <a href="<?php echo $value->url_img ?>" data-gall="portfolioGallery" class="venobox" title="<?php echo $value->title ?> <?php echo $value->description ?>"><i class="bx bx-plus"></i></a>
+              </div>
+            </div>
+          </div>
+
       <?php
       endforeach;
       ?>
-    </ul>
   </div>
+</div>
+</section>
+
+
+<?php
+} else if ($galeria[0]->type_gallery == 4) {
+
+do_action( "ejecutar_galeria_4");
+
+?>
+
+  <main class="main-content">
+
+    <div class="swb-container-fluid">
+
+      <section class="swb-row align-items-stretch photos" id="section-photos">
+        <div class="swb-col-12 swb-col-md-12">
+        <div class="swb-row align-items-stretch">
+      <?php
+      foreach ($galeria as $key => $value) :
+      ?>
+        <div class="swb-col-6 swb-col-md-6 swb-col-lg-4 swb-margen" data-aos="fade-up">
+          <a href="<?php echo $value->url_img ?>" class="d-block photo-item" data-fancybox="gallery">
+            <img src="<?php echo $value->url_img ?>" alt="Image" class="swb-img-fluid">
+            <div class="photo-text-more">
+              <span class="icon icon-search"></span>
+                   <h4 class="swb-text-white swb-font-weight-bold"><?php echo $value->title ?></h4>
+                   <p class="swb-text-white swb-font-weight-bold"><?php echo $value->description ?></p>
+            </div>
+          </a>
+        </div>
+
+      <?php
+      endforeach;
+      ?>
+  </div>
+</div>
+</section>
+</div>
+</main>
+
+<?php
+} else if ($galeria[0]->type_gallery == 5) {
+
+do_action( "ejecutar_galeria_5");
+
+?>
+
+    <section id="portfolio" class="portfolio">
+      <div class="swb-container">
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+      <?php
+      foreach ($galeria as $key => $value) :
+      ?>
+
+          <div class="swb-col-lg-4 swb-col-md-6 portfolio-item">
+            <a href="<?php echo $value->url_img ?>" data-gall="portfolioGallery" class="venobox preview-link" title="<?php echo $value->title ?> <?php echo $value->description ?>"><img src="<?php echo $value->url_img ?>" class="swb-img-fluid" alt=""></a>
+            <div class="portfolio-info">
+              <h4 class="tamano-fuente-title"><?php echo $value->title ?></h4>
+              <p class="tamano-fuente-parrafo"><?php echo $value->description ?></p>
+              <a href="<?php echo $value->url_img ?>" data-gall="portfolioGallery" class="venobox preview-link" title="<?php echo $value->title ?> <?php echo $value->description ?>"><i class="bx bx-plus"></i></a>
+           </div>
+          </div>
+
+      <?php
+      endforeach;
+      ?>
+  </div>
+</div>
+</section>
+
+
+
 
 <?php
 }

@@ -1,0 +1,110 @@
+/**
+* Template Name: Remember - v2.0.0
+* Template URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.swb-portfolio {
+  padding-bottom: 40px;
+}
+
+.swb-portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.swb-portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #444444;
+  margin: 0 3px 10px 3px;
+  transition: all ease-in-out 0.3s;
+  background: #efefef;
+  border-radius: 50px;
+}
+
+.swb-portfolio #portfolio-flters li:hover, .swb-portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: #8fc04e;
+}
+
+.swb-portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.swb-portfolio .swb-portfolio-item {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.swb-portfolio .swb-portfolio-item img {
+  position: relative;
+  top: 0;
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swb-portfolio .swb-portfolio-item .swb-portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: -50px;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: #8fc04e;
+  padding: 15px 20px;
+}
+
+.swb-portfolio .swb-portfolio-item .swb-portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.swb-portfolio .swb-portfolio-item .swb-portfolio-info p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.swb-portfolio .swb-portfolio-item .swb-portfolio-info .preview-link, .swb-portfolio .swb-portfolio-item .swb-portfolio-info .details-link {
+  position: absolute;
+  right: 50px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.swb-portfolio .swb-portfolio-item .swb-portfolio-info .preview-link:hover, .swb-portfolio .swb-portfolio-item .swb-portfolio-info .details-link:hover {
+  color: #d6e8bf;
+}
+
+.swb-portfolio .swb-portfolio-item .swb-portfolio-info .details-link {
+  right: 15px;
+}
+
+.swb-portfolio .swb-portfolio-item:hover img {
+  top: -30px;
+}
+
+.swb-portfolio .swb-portfolio-item:hover .swb-portfolio-info {
+  opacity: 1;
+  bottom: 0;
+}
+
