@@ -9,7 +9,7 @@
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
 }
-.vbox-overlay{
+.vbox-overlay {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -23,8 +23,8 @@
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 1040;
-    -webkit-transform:translateZ(1000px);
+    z-index: 99999;
+    -webkit-transform: translateZ(1000px);
     transform: translateZ(1000px);
     transform-style: preserve-3d;
 }
